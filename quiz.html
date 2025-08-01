@@ -7,7 +7,7 @@
 <body>
     <h1>Take Quiz</h1>
     <form method="POST">
-        <input name="username" placeholder="Enter Your Name" required><br><br>
+        <input name="username" placeholder="Your Name" required><br><br>
         {% for q in questions %}
             <div>
                 <p><strong>{{ q[1] }}</strong></p>
@@ -19,6 +19,6 @@
         {% endfor %}
         <button type="submit">Submit Quiz</button>
     </form>
-    <a href="/">← Back to Home</a>
+    <a href="/">Back to Home</a>
 </body>
 </html>
