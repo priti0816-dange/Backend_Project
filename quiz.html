@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Take Quiz</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Take Quiz</h1>
+    <form method="POST">
+        <input name="username" placeholder="Enter Your Name" required><br><br>
+        {% for q in questions %}
+            <div>
+                <p><strong>{{ q[1] }}</strong></p>
+                <input type="radio" name="question_{{ q[0] }}" value="{{ q[2] }}" required> {{ q[2] }}<br>
+                <input type="radio" name="question_{{ q[0] }}" value="{{ q[3] }}"> {{ q[3] }}<br>
+                <input type="radio" name="question_{{ q[0] }}" value="{{ q[4] }}"> {{ q[4] }}<br>
+                <input type="radio" name="question_{{ q[0] }}" value="{{ q[5] }}"> {{ q[5] }}<br><br>
+            </div>
+        {% endfor %}
+        <button type="submit">Submit Quiz</button>
+    </form>
+    <a href="/">← Back to Home</a>
+</body>
+</html>
